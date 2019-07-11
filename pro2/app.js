@@ -10,9 +10,12 @@ app.get("/", function(req, res){
     var data = { name : a, age : 25, city : "indore"};
     res.render("home", data);  
 });
-
-
-
+app.get("/about", function(req, res){
+    var x = "indore";
+    var y = "bhopal";
+    var obj = { a : x, b : y };
+    res.render("about", obj);
+});
 app.listen(3000, function(){
     console.log("Server Running");
 });
